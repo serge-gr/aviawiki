@@ -8,24 +8,14 @@
                 </div>
               </div>
               <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                  <div class="rounded-lg h-64 overflow-hidden">
-                    <img alt="content" class="object-cover object-center h-full w-full" src="images/civil.jpg">
-                  </div>
-                  <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Civil</h2>
-                </div>
-                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                  <div class="rounded-lg h-64 overflow-hidden">
-                    <img alt="content" class="object-cover object-center h-full w-full" src="images/cargo.jpg">
-                  </div>
-                  <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Cargo</h2>
-                </div>
-                <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-                  <div class="rounded-lg h-64 overflow-hidden">
-                    <img alt="content" class="object-cover object-center h-full w-full" src="images/business.jpg">
-                  </div>
-                  <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Business</h2>
-                </div>
+                @foreach ($mainCategories as $mainCategory)
+                    <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
+                      <div class="rounded-lg h-64 overflow-hidden">
+                        <img alt="content" class="object-cover object-center h-full w-full" src="{{ $mainCategory->path_to_image }}">
+                      </div>
+                      <h2 class="text-xl font-medium title-font text-gray-900 mt-5">{{ $mainCategory->name }}</h2>
+                    </div>
+                @endforeach
               </div>
             </div>
           </section>

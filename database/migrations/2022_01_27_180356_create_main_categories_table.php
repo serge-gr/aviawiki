@@ -15,6 +15,8 @@ class CreateMainCategoriesTable extends Migration
     {
         Schema::create('main_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('path_to_image');
             $table->timestamps();
         });
     }
