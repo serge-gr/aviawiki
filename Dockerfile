@@ -1,7 +1,7 @@
 FROM php
 
-WORKDIR /app/public
+WORKDIR /aviawiki
 
 COPY . .
 
-CMD ["php", "index.php"]
+CMD ["php", "public/index.php"]
