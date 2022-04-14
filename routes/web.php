@@ -14,7 +14,7 @@ use App\Http\Controllers\MainCategoryController;
 |
 */
 
-Route::get('/', [MainCategoryController::class, 'index']);
+Route::get('/', [MainCategoryController::class, 'index'])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
